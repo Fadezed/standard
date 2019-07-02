@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @since 2018-11-21 3:19 PM
  */
 public class Equals {
-    static final float EPSILON = 0.00001f;
+    private static final float EPSILON = 0.00001f;
 
     public static void main(String[] args) {
         /*
@@ -41,13 +41,16 @@ public class Equals {
          * 因为精度问题，浮点数间的equals非常不可靠，在vjkit的NumberUtil中有对应的封装函数。
          */
         float f1 = 0.15f;
-        float f2 = 0.45f/3; //实际等于0.14999999
+        //实际等于0.14999999
+        float f2 = 0.45f/3;
 
         //WRONG
         if (f1 == f2) {
 
         }
-        if (Double.compare(f1,f2)==0)
+        if (Double.compare(f1,f2)==0){
+
+        }
 
         //RIGHT
         if (Math.abs(f1-f2)<EPSILON) {

@@ -19,14 +19,15 @@ public class StrConcat {
          */
         String str1 = "zed";
         String str2 = "fade";
-        String s  = "hello" + str1 +  str2;  //Almost OK，除非初始长度有问题，见第3点.
-
-        String s1  = "hello";  //WRONG
+        //Almost OK，除非初始长度有问题，见第3点.
+        String s  = "hello" + str1 +  str2;
+        //WRONG
+        String s1  = "hello";
         if (true) {
             s += str1;
         }
-
-        String str = "start";       //WRONG
+        //WRONG
+        String str = "start";
         for (int i = 0; i < 100; i++) {
             str = str + "hello";
         }
@@ -74,7 +75,9 @@ public class StrConcat {
         str.indexOf('e');
         str.replace('m','z');
 
+
     }
+
     static class MyObject{
         public MyObject(int id, String name) {
             this.id = id;

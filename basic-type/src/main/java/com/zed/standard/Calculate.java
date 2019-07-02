@@ -15,9 +15,10 @@ public class Calculate {
          *
          *  需要强制将除数或被除数转换为float或double。
          */
-
-        double d = 24/7;  //结果是3.0
-        double d1 =  (double)24/7; //结果是正确的3.42857
+        //结果是3.0
+        double d = 24/7;
+        //结果是正确的3.42857
+        double d1 =  (double)24/7;
         /*-------------------------------------------------------------------------------------*/
 
 
@@ -26,8 +27,10 @@ public class Calculate {
          *
          * 需要强制将乘数的一方转换为long。
          */
-        long l = Integer.MAX_VALUE * 2; // 结果是溢出的－2
-        long l1 = Integer.MAX_VALUE * 2L; //结果是正确的4294967294
+        // 结果是溢出的－2
+        long l = Integer.MAX_VALUE * 2;
+        //结果是正确的4294967294
+        long l1 = Integer.MAX_VALUE * 2L;
         //另外，int的最大值约21亿，留意可能溢出的情况。
 
         /*-------------------------------------------------------------------------------------*/
@@ -37,18 +40,23 @@ public class Calculate {
          *
          * 另外，Integer.MIN_VALUE取绝对值也仍然是负数。参考vjkit的MathUtil做的安全封装。
          */
-        System.out.println(-4 % 3);//结果为 -1
-        System.out.println(Math.abs(Integer.MIN_VALUE));//-2147483648
+        //结果为 -1
+        System.out.println(-4 % 3);
+        //-2147483648
+        System.out.println(Math.abs(Integer.MIN_VALUE));
         /*-------------------------------------------------------------------------------------*/
 
         /*
          *  double 或 float 计算时有不可避免的精度问题
          */
-        float f = 0.45f/3;    //结果是0.14999999
+        //结果是0.14999999
+        float f = 0.45f/3;
         System.out.println(f);
-        double d12 = 0.45d/3;  //结果是正确的0.15
+        //结果是正确的0.15
+        double d12 = 0.45d/3;
         System.out.println(d12);
-        double d2 = 1.03d - 0.42d; //结果是0.6100000000000001
+        //结果是0.6100000000000001
+        double d2 = 1.03d - 0.42d;
         System.out.println(d2);
 
         /*
